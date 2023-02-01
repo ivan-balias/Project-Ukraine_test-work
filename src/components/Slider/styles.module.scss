@@ -1,0 +1,26 @@
+.slider {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+
+  .activeImage {
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .imagesList {
+    display: flex;
+    gap: 10px;
+
+    img {
+      width: calc(100% / 5);
+      cursor: pointer;
+    }
+  }
+
+}

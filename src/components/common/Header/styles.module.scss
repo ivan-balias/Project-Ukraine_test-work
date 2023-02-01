@@ -1,0 +1,28 @@
+.header {
+  background: #1e1e1e;
+  padding: 10px 0;
+
+  .menu {
+    width: 100%;
+    margin: 0 auto;
+
+    .list {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+
+      li {
+
+        .link {
+          color: #fff;
+          text-decoration: none;
+
+          &.active {
+            font-weight: bold;
+            color: #c38fff;
+          }
+        }
+      }
+    }
+  }
+}

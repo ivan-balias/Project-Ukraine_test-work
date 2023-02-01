@@ -1,0 +1,64 @@
+@use 'assets/scss/mixins/media';
+@import "./assets/scss/variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #121212;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+
+  @include media.max-width(media.$breakpoint-large) {
+    max-width: 1000px;
+  }
+
+  @include media.max-width(media.$breakpoint-medium) {
+    max-width: 700px;
+  }
+
+  @include media.max-width(media.$breakpoint-small) {
+    max-width: 100%;
+  }
+
+}
+
+.error_page {
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.error_page > .error_page_text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+}
+
+.error_page > .error_page_text > span {
+  font-style: italic;
+  color: #939393;
+}

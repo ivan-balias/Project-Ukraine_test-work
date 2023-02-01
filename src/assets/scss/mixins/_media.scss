@@ -1,0 +1,27 @@
+@import "src/assets/scss/variables";
+
+@mixin max-width($breakpoint) {
+  @if ($breakpoint == $breakpoint-xsmall) {
+    @media only screen and (min-width: $breakpoint-xsmall) and (max-width: $breakpoint-small) {
+      @content;
+    }
+  } @else if ($breakpoint == $breakpoint-small) {
+    @media only screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-medium) {
+      @content;
+    }
+  } @else if ($breakpoint == $breakpoint-medium) {
+    @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-large) {
+      @content;
+    }
+  } @else if ($breakpoint == $breakpoint-large) {
+    @media only screen and (min-width: $breakpoint-large) and (max-width: $breakpoint-extra-large) {
+      @content;
+    }
+  } @else if ($breakpoint == $breakpoint-extra-large) {
+    @media only screen and (max-width: $breakpoint-extra-large) {
+      @content;
+    }
+  } @else {
+    @error "UNKNOWN MEDIA BREAKPOINT #{$breakpoint}";
+  }
+}
